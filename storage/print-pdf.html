@@ -1,0 +1,305 @@
+<html>
+
+<head>
+  <style>
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      position: relative;
+      color: black;
+      font-size: 11px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .check {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .sex {
+      position: absolute;
+      top: 87px;
+      right: 181px;
+      height: 27px;
+      width: 70px;
+    }
+
+    .sex .female {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 3px;
+      right: 39px;
+    }
+
+    .sex .male {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 16px;
+      right: 39px;
+    }
+
+    .date {
+      position: absolute;
+      height: 27px;
+      width: 150px;
+      top: 90px;
+      right: 25px;
+    }
+
+    .name {
+      position: absolute;
+      height: 27px;
+      width: 150px;
+      top: 90px;
+      left: 25px;
+    }
+
+    .name .firstname {
+      position: absolute;
+      bottom: 3px;
+      left: 255px;
+    }
+
+    .name .lastname {
+      position: absolute;
+      bottom: 3px;
+      left: 5px;
+    }
+
+    .date .month {
+      position: absolute;
+      bottom: 3px;
+      left: 5px;
+    }
+
+    .date .day {
+      position: absolute;
+      bottom: 3px;
+      left: 49px;
+    }
+
+    .date .year {
+      position: absolute;
+      bottom: 3px;
+      left: 100px;
+    }
+
+    .race {
+      position: absolute;
+      height: 32px;
+      top: 121px;
+      width: 333px;
+      right: 26px;
+    }
+
+    .race .amer-ind {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 4px;
+      left: 115px;
+    }
+
+    .race .asian {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 4px;
+      left: 197px;
+    }
+
+    .race .black {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 4px;
+      left: 238px;
+    }
+
+    .race .white {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 4px;
+      left: 280px;
+    }
+
+    .race .hawaiian-pacific {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      bottom: 6px;
+      left: 5px;
+    }
+
+    .race .other {
+      position: absolute;
+      height: 10px;
+      width: 150px;
+      bottom: 3px;
+      left: 142px;
+    }
+
+    .other-checkbox {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      top: 2px;
+      left: 1px;
+    }
+
+    .other-field {
+      position: absolute;
+      top: -4px;
+      left: 37px;
+      width: 113px;
+    }
+
+    .health_insurance {
+      position: absolute;
+      top: 190px;
+      left: 45px;
+      height: 27px;
+      width: 99px;
+    }
+
+    .check_yes {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      right: 18px;
+      top: 4px;
+    }
+
+    .check_no {
+      position: absolute;
+      height: 5px;
+      width: 5px;
+      right: 18px;
+      top: 17px;
+    }
+
+    .height {
+      position: absolute;
+      height: 10px;
+      width: 50px;
+      top: 409px;
+      left: 70px;
+      text-align: center;
+    }
+
+    .weight {
+      position: absolute;
+      height: 10px;
+      width: 50px;
+      top: 425px;
+      left: 70px;
+      text-align: center;
+    }
+
+    .bmi {
+      position: absolute;
+      height: 10px;
+      width: 50px;
+      top: 444px;
+      left: 70px;
+      text-align: center;
+    }
+
+    .blood_pressure {
+      position: absolute;
+      height: 10px;
+      width: 100px;
+      left: 135px;
+      top: 487px;
+      text-align: center;
+    }
+
+    .systolic {
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
+
+    .diastolic {
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="{{ path_to_bg }}" alt="bg" width="100%">
+  <div class="sex">
+    <div class="female">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="male">
+      <img src="check.png" class="check" alt="check">
+    </div>
+  </div>
+  <div class="date">
+    <div class="month">{{ month_birthday }}</div>
+    <div class="day">{{ day_birthday }}</div>
+    <div class="year">{{ year_birthday }}</div>
+  </div>
+  <div class="name">
+    <div class="firstname">{{ firstName }}</div>
+    <div class="lastname">{{ lastName }}</div>
+  </div>
+  <div class="race">
+    <div class="amer-ind">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="asian">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="black">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="white">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="hawaiian-pacific">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="other">
+      <div class="other-checkbox">
+        <img src="check.png" class="check" alt="check">
+      </div>
+      <div class="other-field">werqwer</div>
+    </div>
+  </div>
+  <div class="health_insurance">
+    <div class="check_yes">
+      <img src="check.png" class="check" alt="check">
+    </div>
+    <div class="check_no">
+      <img src="check.png" class="check" alt="check">
+    </div>
+  </div>
+  <div class="height">{{ height }}</div>
+  <div class="weight">{{ weight }}</div>
+  <duv class="bmi">{{ bmi }}</duv>
+  <div class="blood_pressure">
+    <div class="systolic">{{ systolic }}</div>
+    <div class="diastolic">{{ diastolic }}</div>
+  </div>
+</body>
+
+</html>
