@@ -37,4 +37,4 @@ npm start
 ```
 The back / services / folder contains methods that interact with the network using the Node.js SDK.
 
-For a complete understanding of the role of this application in the Child Medical Record project, refer to the "LINK" article.
+For a complete understanding of the role of this application in the Child Medical Record project, refer to the [article](https://www.google.com).
