@@ -16,7 +16,7 @@ npm install
 
 It is necessary to connect to the database:
 ```
-vim ~ / back / config / config.json
+vim ~/back/config/config.json
 ```
 Here you need to assign the key "host" the correct value.
 
@@ -29,7 +29,7 @@ npx sequelize-cli db: seed: all
 
 Set exports.hostName to constants.js (value for the current server):
 ```
-vim ~ / back / constants.js
+vim ~/back/constants.js
 ```
 Now you need to run the command:
 ```
