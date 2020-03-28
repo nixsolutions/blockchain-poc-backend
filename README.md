@@ -1,62 +1,40 @@
-```
-cd network
-```
+# Back-applications
 
-```
+This application provides client interaction with the blockchain network. Among the required dependencies in the file packaje.json are "fabric-ca-client" and "fabric-network". These are the Node.js SDK tools for working with a Hyperledger Fabric network.
+
+In order to install the application, you need to clone the project on the server on which the Hyperledger Fabric network is located:
+
+cd ~
+git clone https://gitlab.nixdev.co/poc-blockchain/back.git
+
+and install the dependencies:
+
+cd back
 npm install
-```
 
-#### necessary to assign the address of the server with DB to the "host" variable.
+## Creating Database Tables
 
-```
-vim ~/back/config/config.json
-```
+It is necessary to connect to the database:
 
-#### edit exports.hostName in constants.js (value for the current host):
+vim ~ / back / config / config.json
+ 
+Here you need to assign the key "host" the correct value.
 
-```
-vim ~/back/constants.js
-```
+Our application has prepared migrations and seeds. You need to run them:
 
-#### create tables
+npx sequelize-cli db: migrate
+npx sequelize-cli db: seed: all
 
-```
-npx sequelize-cli db:migrate
-```
+## Application launch
 
-#### create info
+Set exports.hostName to constants.js (value for the current server):
 
-```
-npx sequelize-cli db:seed:all
-```
+vim ~ / back / constants.js
 
-#### run app
+Now you need to run the command:
 
-```
 npm start
-```
 
-#### generate users and admins. {org} == parents, hospital or kindergarten. (To EC2 with "parents", "hospital", "kindergarten")
+The back / services / folder contains methods that interact with the network using the Node.js SDK.
 
-```
-cd generators
-./userGenerator.sh {org}
-```
-
-#### generate two cards (from EC2 with "parents")
-
-```
-node setCards.js
-```
-
-#### create agreement (from EC2 with "parents")
-
-```
-node createAgreement.js
-```
-
-#### sign agreement (from EC2 with "hospital")
-
-```
-node signAgreement.js
-```
+For a complete understanding of the role of this application in the Child Medical Record project, refer to the "LINK" article.
