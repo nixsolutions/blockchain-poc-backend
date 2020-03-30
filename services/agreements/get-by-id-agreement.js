@@ -22,7 +22,7 @@ let addAgreement = function (enrollmentId, organisation) {
       await gateway.connect(ccpPath, { wallet, identity: enrollmentId, discovery: { enabled: true, asLocalhost: true } });
 
       const network = await gateway.getNetwork('parentshospital');
-      const contract = network.getContract('poc');
+      const contract = network.getContract('medical-contract');
 
       const result = await contract.createTransaction("getAgreement")
         .submit()

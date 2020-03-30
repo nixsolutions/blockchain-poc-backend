@@ -21,7 +21,7 @@ let addCard = function (userId, cardId, name, birthDate, height, weight, timesta
       await gateway.connect(ccpPath, { wallet, identity: userId, discovery: { enabled: true, asLocalhost: true } });
 
       const network = await gateway.getNetwork('parentshospital');
-      const contract = network.getContract('poc');
+      const contract = network.getContract('medical-contract');
       const cardData = {
         id        : cardId,
         type      : 'card',
