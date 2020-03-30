@@ -21,7 +21,7 @@ let reportCreate = function (key, cardId, parent, userId, name, birth_date, heig
       await gateway.connect(ccpPath, { wallet, identity: userId, discovery: { enabled: true, asLocalhost: true } });
 
       const network = await gateway.getNetwork('parentshospitalkindergarten');
-      const contract = network.getContract('poc_kinder');
+      const contract = network.getContract('kindergarten-contract');
 
       const reportData = {
         id         : cardId,

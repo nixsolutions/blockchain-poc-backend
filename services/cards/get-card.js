@@ -20,7 +20,7 @@ let getCard = function (userId, cardId, organisation) {
       const gateway = new Gateway();
       await gateway.connect(ccpPath, { wallet, identity: userId, discovery: { enabled: true, asLocalhost: true } });
       const network = await gateway.getNetwork('parentshospital');
-      const contract = network.getContract('poc');
+      const contract = network.getContract('medical-contract);
 
       const resultGetCard = await contract.evaluateTransaction("getCard", cardId);
 

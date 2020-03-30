@@ -21,7 +21,7 @@ let approveReport = function (key, userId) {
       await gateway.connect(ccpPath, { wallet, identity: userId, discovery: { enabled: true, asLocalhost: true } });
 
       const network = await gateway.getNetwork('parentshospitalkindergarten');
-      const contract = network.getContract('poc_kinder');
+      const contract = network.getContract('kindergarten-contract');
 
       const result = await contract.createTransaction('approveReport')
         .submit(key, userId)

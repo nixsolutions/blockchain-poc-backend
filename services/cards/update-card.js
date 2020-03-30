@@ -21,7 +21,7 @@ let updateCard = function (cardId, userId, height, weight) {
       await gateway.connect(ccpPath, { wallet, identity: userId, discovery: { enabled: true, asLocalhost: true } });
 
       const network = await gateway.getNetwork('parentshospital');
-      const contract = network.getContract('poc');
+      const contract = network.getContract('medical-contract');
 
       const result = await contract.createTransaction("updateCard")
           .submit(`${cardId}`, `${height}`, `${weight}`)
