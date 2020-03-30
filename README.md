@@ -1,4 +1,4 @@
-# Back-applications
+# Back-application
 
 This application provides client interaction with the blockchain network. Among the required dependencies in the file packaje.json are "fabric-ca-client" and "fabric-network". These are the Node.js SDK tools for working with a Hyperledger Fabric network.
 
@@ -12,7 +12,7 @@ and install the dependencies:
 cd back
 npm install
 ```
-## Creating Database Tables
+## Creating database tables
 
 It is necessary to connect to the database:
 ```
