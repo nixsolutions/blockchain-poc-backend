@@ -5,7 +5,7 @@ This application provides client interaction with the blockchain network. Among 
 In order to install the application, you need to clone the project on the server on which the Hyperledger Fabric network is located:
 ```
 cd ~
-git clone https://gitlab.nixdev.co/poc-blockchain/back.git
+git clone https://github.com/nixsolutions/blockchain-poc-backend.git
 ```
 and install the dependencies:
 ```
