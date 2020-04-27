@@ -37,4 +37,5 @@ npm start
 ```
 The back / services / folder contains methods that interact with the network using the Node.js SDK.
 
-For a complete understanding of the role of this application in the Child Medical Record project, refer to the [article](https://www.google.com).
+## License
+The project is developed by [NIX Solutions](http://nixsolutions.com) Go team and distributed under [MIT LICENSE](https://github.com/nixsolutions/blockchain-poc-backend/master/LICENSE)
