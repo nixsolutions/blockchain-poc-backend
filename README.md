@@ -38,4 +38,4 @@ npm start
 The back / services / folder contains methods that interact with the network using the Node.js SDK.
 
 ## License
-The project is developed by [NIX Solutions](http://nixsolutions.com) Go team and distributed under [MIT LICENSE](https://github.com/nixsolutions/blockchain-poc-backend/master/LICENSE)
+The project is developed by [NIX Solutions](http://nixsolutions.com) Go team and distributed under [MIT LICENSE](https://github.com/nixsolutions/blockchain-poc-backend/blob/master/LICENSE)
