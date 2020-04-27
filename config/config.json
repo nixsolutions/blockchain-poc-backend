@@ -2,21 +2,21 @@
   "development": {
     "username": "dev",
     "password": "devpass",
-    "database": "homestead_dev",
+    "database": "poc_database",
     "host": "ec2-52-91-79-146.compute-1.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
     "username": "dev",
     "password": "devpass",
-    "database": "homestead_dev",
+    "database": "poc_database",
     "host": "ec2-52-91-79-146.compute-1.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "username": "dev",
     "password": "devpass",
-    "database": "homestead_dev",
+    "database": "poc_database",
     "host": "ec2-52-91-79-146.compute-1.amazonaws.com",
     "dialect": "mysql"
   }
